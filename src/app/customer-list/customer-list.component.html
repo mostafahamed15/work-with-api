@@ -1,0 +1,11 @@
+<ul *ngIf="customersObservable | async as customers else empty">
+
+  <li *ngFor="let customer of customers">
+  
+  {{customer.name}}
+  
+  </li>
+  
+  </ul>
+  
+  <ng-template #empty> No Customers Yet </ng-template>
